@@ -17,4 +17,7 @@ migrationsdown:
 sqlcgenerate:
 	docker run --rm -v '"/*' -w /src kjconroy/sqlc generate
 
-.PHONY: postgres createdb dropdb migrationsup migrationsdown sqlcgenerat
+test:
+	go test -v -cover ./...	
+
+.PHONY: postgres createdb dropdb migrationsup migrationsdown sqlcgenerate test
