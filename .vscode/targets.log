@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Aug 14 00:11:58 2022
+# Make data base, printed on Sun Aug 14 22:45:18 2022
 
 # Variables
 
@@ -39,7 +39,7 @@ GOPATH = C:\Users\Gregorio\go
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_145316_IXCLGMFOLQJIDJEO
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_51072_ZPBHMAVUVJZJPENH
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -91,7 +91,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 145316
+VSCODE_PID = 51072
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -133,8 +133,6 @@ PROMPT = $P$G
 # environment
 CHOCOLATEYLASTPATHUPDATE = 133038249710033101
 # environment
-GOROOT = C:\Program Files\Go
-# environment
 LOGONSERVER = \\DESKTOP-KSK027M
 # environment
 USERNAME = Gregorio
@@ -158,7 +156,8 @@ GNUMAKEFLAGS :=
 OS = Windows_NT
 # makefile
 .DEFAULT_GOAL := postgres
-# default
+# defau 
+lt
 MAKE_VERSION := 4.3
 # environment
 PROGRAMFILES(X86) = C:\Program Files (x86)
@@ -179,7 +178,8 @@ GOMODCACHE = C:\Users\Gregorio\go\pkg\mod
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+COMMONPROGRAMF 
+ILES(X86) = C:\Program Files (x86)\Common Files
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
@@ -199,7 +199,8 @@ ALLUSERSPROFILE = C:\ProgramData
 # environment
 SESSIONNAME = Console
 # default
-.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
+.FEATURES := target-specific order-only second 
+-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
 PROCESSOR_REVISION = 9702
 # environment
@@ -207,7 +208,7 @@ CHOCOLATEYTOOLSLOCATION = C:\tools
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 151 Stepping 2, GenuineIntel
 # variable set hash-table stats:
-# Load=97/1024=9%, Rehash=0, Collisions=8/124=6%
+# Load=96/1024=9%, Rehash=0, Collisions=8/123=7%
 
 # Pattern-specific Variable Values
 
@@ -215,7 +216,8 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 151 Stepping 2, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/Gregorio/Documents/Dev/backend/simplebank, mtime 1660445523): 10 files, no impossibilities.
+# . (key c:/Users/Gregorio/Documen 
+ts/Dev/backend/simplebank, mtime 1660445523): 10 files, no impossibilities.
 
 # 10 files, no impossibilities in 1 directories.
 
@@ -320,6 +322,6 @@ createdb:
 # strcache performance: lookups = 40 / hit rate = 47%
 # hash-table stats:
 # Load=21/8192=0%, Rehash=0, Collisions=0/40=0%
-# Finished Make data base on Sun Aug 14 00:11:58 2022
+# Finished Make data base on Sun Aug 14 22:45:18 2022
 
  
