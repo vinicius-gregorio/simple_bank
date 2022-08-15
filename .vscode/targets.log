@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Aug 15 07:15:11 2022
+# Make data base, printed on Mon Aug 15 20:40:03 2022
 
 # Variables
 
@@ -23,7 +23,7 @@ USERPROFILE = C:\Users\Gregorio
 # environment
 LOCALAPPDATA = C:\Users\Gregorio\AppData\Local
 # environment
-VSCODE_CWD = C:\Users\Gregorio\AppData\Local\Programs\Microsoft VS Code
+VSCODE_CWD = C:\Users\Gregorio\Documents\Dev\backend\simplebank
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -39,7 +39,7 @@ GOPATH = C:\Users\Gregorio\go
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_52884_WNWPHBZVWEOBWRGH
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_27496_SIKWISVVXUVWCZEI
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -79,7 +79,8 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 PROGRAMFILES = C:\Program Files (x86)
 # environment
-MFLAGS = -pqrR
+MFLAGS = -pqr 
+R
 # default
 .SHELLFLAGS := -c
 # environment
@@ -91,7 +92,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 52884
+VSCODE_PID = 27496
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -132,8 +133,6 @@ MAKEFILES :=
 PROMPT = $P$G
 # environment
 CHOCOLATEYLASTPATHUPDATE = 133038249710033101
-# environment
-GOROOT = C:\Program Files\Go
 # environment
 LOGONSERVER = \\DESKTOP-KSK027M
 # environment
@@ -199,7 +198,8 @@ ALLUSERSPROFILE = C:\ProgramData
 # environment
 SESSIONNAME = Console
 # default
-.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
+.FEATURES := target-specific order-only second-expansi 
+on else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
 PROCESSOR_REVISION = 9702
 # environment
@@ -207,7 +207,7 @@ CHOCOLATEYTOOLSLOCATION = C:\tools
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 151 Stepping 2, GenuineIntel
 # variable set hash-table stats:
-# Load=97/1024=9%, Rehash=0, Collisions=8/124=6%
+# Load=96/1024=9%, Rehash=0, Collisions=8/123=7%
 
 # Pattern-specific Variable Values
 
@@ -251,7 +251,8 @@ sqlcgenerate:
 dropdb:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  File does not exist.
+#  File does  
+not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 8):
 	docker exec -it postgres dropdb --username=postgres simple_bank
@@ -286,7 +287,8 @@ test:
 	go test -v -cover ./...	
 
 postgres:
-#  Phony target (prerequisite of .PHONY).
+#  Phony target (prerequisite 
+ of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
@@ -299,7 +301,8 @@ createdb:
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 5):
-	docker exec -it postgres createdb --username=postgres --owner=postgres simple_bank
+	docker exec -it postgres createdb --username= 
+postgres --owner=postgres simple_bank
 
 .PHONY: postgres createdb dropdb migrationsup migrationsdown sqlcgenerate test
 #  Implicit rule search has not been done.
@@ -320,6 +323,6 @@ createdb:
 # strcache performance: lookups = 41 / hit rate = 46%
 # hash-table stats:
 # Load=22/8192=0%, Rehash=0, Collisions=0/41=0%
-# Finished Make data base on Mon Aug 15 07:15:11 2022
+# Finished Make data base on Mon Aug 15 20:40:03 2022
 
  

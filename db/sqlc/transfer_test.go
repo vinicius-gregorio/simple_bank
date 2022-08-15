@@ -9,10 +9,7 @@ import (
 	"github.com/vinicius-gregorio/simple_bank/util"
 )
 
-func createRandomTransfer(t *testing.T) Transfer {
-
-	account1 := createRandomAccount(t)
-	account2 := createRandomAccount(t)
+func createRandomTransfer(t *testing.T, account1, account2 Account) Transfer {
 
 	arg := CreateTransferParams{
 		FromAccountID: account1.ID,
@@ -31,11 +28,15 @@ func createRandomTransfer(t *testing.T) Transfer {
 }
 
 func TestCreateTransfer(t *testing.T) {
-	createRandomTransfer(t)
+	account1 := createRandomAccount(t)
+	account2 := createRandomAccount(t)
+	createRandomTransfer(t, account1, account2)
 }
 
 func TestGetTransfer(t *testing.T) {
-	createTranfer := createRandomTransfer(t)
+	account1 := createRandomAccount(t)
+	account2 := createRandomAccount(t)
+	createTranfer := createRandomTransfer(t, account1, account2)
 	getTransfer, err := testQueries.GetTransfer(context.Background(), createTranfer.ID)
 	require.NoError(t, err)
 
@@ -44,7 +45,10 @@ func TestGetTransfer(t *testing.T) {
 }
 
 func TestDeleteTransfer(t *testing.T) {
-	transfer1 := createRandomTransfer(t)
+	account1 := createRandomAccount(t)
+	account2 := createRandomAccount(t)
+
+	transfer1 := createRandomTransfer(t, account1, account2)
 	err := testQueries.DeleteTransfer(context.Background(), transfer1.ID)
 	require.NoError(t, err)
 
@@ -56,13 +60,17 @@ func TestDeleteTransfer(t *testing.T) {
 }
 
 func TestListTransfers(t *testing.T) {
+	account1 := createRandomAccount(t)
+	account2 := createRandomAccount(t)
 	for i := 0; i < 10; i++ {
-		createRandomTransfer(t)
+		createRandomTransfer(t, account1, account2)
 	}
 
 	arg := ListTransfersParams{
-		Limit:  5,
-		Offset: 5,
+		FromAccountID: account1.ID,
+		ToAccountID:   account2.ID,
+		Limit:         5,
+		Offset:        5,
 	}
 
 	transfers, err := testQueries.ListTransfers(context.Background(), arg)
