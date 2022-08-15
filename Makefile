@@ -15,7 +15,7 @@ migrationsdown:
 
 
 sqlcgenerate:
-	docker run --rm -v '"/*' -w /src kjconroy/sqlc generate
+	docker run --rm -v "%cd%:/src" -w /src kjconroy/sqlc generate
 
 test:
 	go test -v -cover ./...	

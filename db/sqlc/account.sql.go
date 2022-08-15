@@ -132,19 +132,3 @@ func (q *Queries) UpdateAccount(ctx context.Context, arg UpdateAccountParams) (A
 	)
 	return i, err
 }
-
-
-//UPDATE ACCOUNT SHOULD BE LIKE THIS: 
-//(generated function is not working)
-// func (q *Queries) UpdateAccount(ctx context.Context, arg UpdateAccountParams) (Account, error) {
-// 	row := q.db.QueryRowContext(ctx, updateAccount, arg.ID, arg.Balance)
-// 	var i Account
-// 	err := row.Scan(
-// 		&i.ID,
-// 		&i.Owner,
-// 		&i.Balance,
-// 		&i.Currency,
-// 		&i.CreatedAt,
-// 	)
-// 	return i, err
-// }
