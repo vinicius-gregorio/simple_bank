@@ -6,12 +6,13 @@ import (
 	"fmt"
 )
 
-// Store provides all functions to db queries and transactions
+// Store provides all functions to execute db queries and transaction
 type Store struct {
-	*Queries
 	db *sql.DB
+	*Queries
 }
 
+// NewStore creates a new store
 func NewStore(db *sql.DB) *Store {
 	return &Store{
 		db:      db,
@@ -19,8 +20,8 @@ func NewStore(db *sql.DB) *Store {
 	}
 }
 
-// execTX executes a function within the database transaction
-func (store *Store) execTX(ctx context.Context, fn func(*Queries) error) error {
+// ExecTx executes a function within a database transaction
+func (store *Store) execTx(ctx context.Context, fn func(*Queries) error) error {
 	tx, err := store.db.BeginTx(ctx, nil)
 	if err != nil {
 		return err
@@ -28,23 +29,24 @@ func (store *Store) execTX(ctx context.Context, fn func(*Queries) error) error {
 
 	q := New(tx)
 	err = fn(q)
-
 	if err != nil {
-		if rollbackError := tx.Rollback(); rollbackError != nil {
-			return fmt.Errorf("Transaction error: %v , Rollback error: %v", err, rollbackError)
+		if rbErr := tx.Rollback(); rbErr != nil {
+			return fmt.Errorf("tx err: %v, rb err: %v", err, rbErr)
 		}
 		return err
-
 	}
+
 	return tx.Commit()
 }
 
+// TransferTxParams contains the input parameters of the transfer transaction
 type TransferTxParams struct {
 	FromAccountID int64 `json:"from_account_id"`
 	ToAccountID   int64 `json:"to_account_id"`
 	Amount        int64 `json:"amount"`
 }
 
+// TransferTxResult is the result of the transfer transaction
 type TransferTxResult struct {
 	Transfer    Transfer `json:"transfer"`
 	FromAccount Account  `json:"from_account"`
@@ -53,14 +55,14 @@ type TransferTxResult struct {
 	ToEntry     Entry    `json:"to_entry"`
 }
 
-// TransferTransaction performs a money transfer from one account to another
-// It creates a transfer record, add account queries, and update accounts balance within a single database transaction
-func (store *Store) TransferTransaction(ctx context.Context, arg TransferTxParams) (TransferTxResult, error) {
-
+// TransferTx performs a money transfer from one account to the other.
+// It creates the transfer, add account entries, and update accounts' balance within a database transaction
+func (store *Store) TransferTx(ctx context.Context, arg TransferTxParams) (TransferTxResult, error) {
 	var result TransferTxResult
 
-	err := store.execTX(ctx, func(q *Queries) error {
+	err := store.execTx(ctx, func(q *Queries) error {
 		var err error
+
 		result.Transfer, err = q.CreateTransfer(ctx, CreateTransferParams{
 			FromAccountID: arg.FromAccountID,
 			ToAccountID:   arg.ToAccountID,
@@ -74,7 +76,6 @@ func (store *Store) TransferTransaction(ctx context.Context, arg TransferTxParam
 			AccountID: arg.FromAccountID,
 			Amount:    -arg.Amount,
 		})
-
 		if err != nil {
 			return err
 		}
@@ -83,14 +84,54 @@ func (store *Store) TransferTransaction(ctx context.Context, arg TransferTxParam
 			AccountID: arg.ToAccountID,
 			Amount:    arg.Amount,
 		})
-
 		if err != nil {
 			return err
 		}
 
-		//TODO: update accounts balance
+		// account1, err := q.GetAccountForUpdate(ctx, arg.FromAccountID)
+		// if err != nil {
+		// 	return err
+		// }
+
+		// result.FromAccount, err = q.UpdateAccount(ctx, UpdateAccountParams{
+		// 	ID:      account1.ID,
+		// 	Balance: account1.Balance - arg.Amount,
+		// })
+		// if err != nil {
+		// 	return err
+		// }
+
+		// account2, err := q.GetAccountForUpdate(ctx, arg.ToAccountID)
+		// if err != nil {
+		// 	return err
+		// }
+
+		// result.ToAccount, err = q.UpdateAccount(ctx, UpdateAccountParams{
+		// 	ID:      account2.ID,
+		// 	Balance: account2.Balance + arg.Amount,
+		// })
+		// if err != nil {
+		// 	return err
+		// }
+
+		result.FromAccount, err = q.AddAccountBalance(ctx, AddAccountBalanceParams{
+			ID:     arg.FromAccountID,
+			Amount: -arg.Amount,
+		})
+		if err != nil {
+			return err
+		}
+
+		result.ToAccount, err = q.AddAccountBalance(ctx, AddAccountBalanceParams{
+			ID:     arg.ToAccountID,
+			Amount: arg.Amount,
+		})
+		if err != nil {
+			return err
+		}
 
 		return nil
 	})
+
 	return result, err
 }
