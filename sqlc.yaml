@@ -5,3 +5,4 @@ packages:
     engine: "postgresql"
     schema: "./db/schema/schema.sql"
     queries: "./db/query/"
+    emit_empty_slices: true

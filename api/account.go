@@ -36,7 +36,8 @@ func (server *Server) createAccount(ctx *gin.Context) {
 }
 
 type getAccountRequest struct {
-	ID int64 `uri:"id" binding:"required,min=1"`
+	//URI PARAMS
+	ID int64 `uri:"id" binding:"required,min=1"` //min -> min value for the param, prevents negative values
 }
 
 func (server *Server) getAccount(ctx *gin.Context) {
@@ -58,4 +59,34 @@ func (server *Server) getAccount(ctx *gin.Context) {
 	}
 
 	ctx.JSON(http.StatusOK, account)
+}
+
+type listAccountRequest struct {
+	//Query PARAMS
+	PAGEID   int32 `form:"page_id" binding:"required,min=1"`
+	PAGESize int32 `form:"page_size" binding:"required,min=5,max=10"`
+}
+
+func (server *Server) listAccounts(ctx *gin.Context) {
+	var req listAccountRequest
+	if err := ctx.ShouldBindQuery(&req); err != nil {
+		ctx.JSON(http.StatusBadRequest, errorResponse(err))
+		return
+	}
+	args := db.ListAccountsParams{
+		Limit:  req.PAGESize,
+		Offset: (req.PAGEID - 1) * req.PAGESize,
+	}
+	accounts, err := server.store.ListAccounts(ctx, args)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			ctx.JSON(http.StatusNotFound, errorResponse(err))
+			return
+		}
+
+		ctx.JSON(http.StatusInternalServerError, errorResponse(err))
+		return
+	}
+
+	ctx.JSON(http.StatusOK, accounts)
 }
