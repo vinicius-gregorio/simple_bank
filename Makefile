@@ -23,4 +23,7 @@ test:
 server: 
 	go run main.go
 
+watch:
+	nodemon --watch './**/*.go' --signal SIGTERM --exec 'go' run main.go
+
 .PHONY: postgres createdb dropdb migrationsup migrationsdown sqlcgenerate test server
