@@ -26,4 +26,7 @@ server:
 watch:
 	nodemon --watch './**/*.go' --signal SIGTERM --exec 'go' run main.go
 
-.PHONY: postgres createdb dropdb migrationsup migrationsdown sqlcgenerate test server
+mockgenerate:
+	mockgen -package mockdb -destination db/mock/store.go github.com/vinicius-gregorio/simple_bank/db/sqlc Store 
+
+.PHONY: postgres createdb dropdb migrationsup migrationsdown sqlcgenerate test server mockgenerate
