@@ -10,9 +10,14 @@ dropdb:
 migrationsup:
 	migrate -path db/migrations -database "postgresql://postgres:postgres@localhost:5432/simple_bank?sslmode=disable" -verbose up
 
+migrationsup1:
+	migrate -path db/migrations -database "postgresql://postgres:postgres@localhost:5432/simple_bank?sslmode=disable" -verbose up 1
+
 migrationsdown:
 	migrate -path db/migrations -database "postgresql://postgres:postgres@localhost:5432/simple_bank?sslmode=disable" -verbose down
 
+migrationsdown1:
+	migrate -path db/migrations -database "postgresql://postgres:postgres@localhost:5432/simple_bank?sslmode=disable" -verbose down 1
 
 sqlcgenerate:
 	docker run --rm -v "%cd%:/src" -w /src kjconroy/sqlc generate
@@ -29,4 +34,4 @@ watch:
 mockgenerate:
 	mockgen -package mockdb -destination db/mock/store.go github.com/vinicius-gregorio/simple_bank/db/sqlc Store 
 
-.PHONY: postgres createdb dropdb migrationsup migrationsdown sqlcgenerate test server mockgenerate
+.PHONY: postgres createdb dropdb migrationsup migrationsdown sqlcgenerate test server mockgenerate migrationsdown1 migrationsup1

@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Aug 16 22:54:12 2022
+# Make data base, printed on Thu Aug 18 06:48:24 2022
 
 # Variables
 
@@ -23,7 +23,7 @@ USERPROFILE = C:\Users\Gregorio
 # environment
 LOCALAPPDATA = C:\Users\Gregorio\AppData\Local
 # environment
-VSCODE_CWD = C:\Users\Gregorio\AppData\Local\Programs\Microsoft VS Code
+VSCODE_CWD = C:\Users\Gregorio\Documents\Dev\backend\simplebank
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -39,7 +39,7 @@ GOPATH = C:\Users\Gregorio\go
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_121720_DNGCYVQAFJXJAWCG
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_4892_ATCLXNKHSILCFHCP
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -53,7 +53,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\Gregorio\AppData\Roaming\Code\CachedData\6d9b74a70ca9c7733b29f0456fd8195364076dda
+VSCODE_CODE_CACHE_PATH = C:\Users\Gregorio\AppData\Roaming\Code\CachedData\e4503b30fc78200f846c62cf8091b76ff5547662
 # environment
 LANG = C
 # default
@@ -91,7 +91,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 121720
+VSCODE_PID = 4892
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -183,7 +183,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\Gregorio\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\f1c53897d4b51776e21ab5bcf88eb4bb-1.70.1-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\f1c53897d4b51776e21ab5bcf88eb4bb-1.70.2-main-sock
 # environment
 GOPROXY = https://proxy.golang.org,direct
 # default
@@ -213,7 +213,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 151 Stepping 2, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/Gregorio/Documents/Dev/backend/simplebank, mtime 1660699936): 14 files, no impossibilities.
+# . (key c:/Users/Gregorio/Documents/Dev/backend/simplebank, mtime 1660702881): 14 files, no impossibilities.
 
 # 14 files, no impossibilities in 1 directories.
 
@@ -234,7 +234,7 @@ migrationsup:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-16 22:25:40
+#  Last modified 2022-08-16 23:21:17
 #  File has been updated.
 #  Successfully updated.
 
@@ -269,6 +269,14 @@ server:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 24):
 	go run main.go
+
+mockgenerate:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 30):
+	mockgen -package mockdb -destination db/mock/store.go github.com/vinicius-gregorio/simple_bank/db/sqlc Store 
 
 # Not a target:
 .DEFAULT:
@@ -314,25 +322,25 @@ createdb:
 #  recipe to execute (from 'Makefile', line 5):
 	docker exec -it postgres createdb --username=postgres --owner=postgres simple_bank
 
-.PHONY: postgres createdb dropdb migrationsup migrationsdown sqlcgenerate test server
+.PHONY: postgres createdb dropdb migrationsup migrationsdown sqlcgenerate test server mockgenerate
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=14/1024=1%, Rehash=0, Collisions=0/32=0%
+# Load=15/1024=1%, Rehash=0, Collisions=0/34=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 27 / storage = 201 B / avg = 7 B
-# current buf: size = 8174 B / used = 201 B / count = 27 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 28 / storage = 214 B / avg = 7 B
+# current buf: size = 8174 B / used = 214 B / count = 28 / avg = 7 B
 
-# strcache performance: lookups = 49 / hit rate = 44%
+# strcache performance: lookups = 52 / hit rate = 46%
 # hash-table stats:
-# Load=27/8192=0%, Rehash=0, Collisions=0/49=0%
-# Finished Make data base on Tue Aug 16 22:54:12 2022
+# Load=28/8192=0%, Rehash=0, Collisions=0/52=0%
+# Finished Make data base on Thu Aug 18 06:48:24 2022
 
  
