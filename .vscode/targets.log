@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 18 19:18:57 2022
+# Make data base, printed on Thu Aug 18 23:18:09 2022
 
 # Variables
 
@@ -23,7 +23,7 @@ USERPROFILE = C:\Users\Gregorio
 # environment
 LOCALAPPDATA = C:\Users\Gregorio\AppData\Local
 # environment
-VSCODE_CWD = C:\Users\Gregorio\Documents\Dev\backend\simplebank
+VSCODE_CWD = C:\Users\Gregorio\AppData\Local\Programs\Microsoft VS Code
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -39,7 +39,7 @@ GOPATH = C:\Users\Gregorio\go
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_128656_SNHEVOWKWYPZUETN
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_151728_TVGTFWUUMKPPXRWE
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -91,7 +91,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 128656
+VSCODE_PID = 151728
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -177,7 +177,8 @@ GOMODCACHE = C:\Users\Gregorio\go\pkg\mod
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+COMMONPROGRA 
+MFILES(X86) = C:\Program Files (x86)\Common Files
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
@@ -213,9 +214,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 151 Stepping 2, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/Gregorio/Documents/Dev/backend/simplebank, mtime 1660820167): 14 files, no impossibilities.
+# . (key c:/Users/Gregorio/Documents/Dev/backend/simplebank, mtime 1660873421): 15 files, no impossibilities.
 
-# 14 files, no impossibilities in 1 directories.
+# 15 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -351,12 +352,13 @@ createdb:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 30 / storage = 244 B / avg = 8 B
-# current buf: size = 8174 B / used = 244 B / count = 30 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 31 / storage = 250 B / avg = 8 B
+# current buf: size = 8174 B / used = 250 B / count = 31 / avg = 8 B
 
-# strcache performance: lookups = 58 / hit rate = 48%
+# strcache perfo 
+rmance: lookups = 59 / hit rate = 47%
 # hash-table stats:
-# Load=30/8192=0%, Rehash=0, Collisions=0/58=0%
-# Finished Make data base on Thu Aug 18 19:18:57 2022
+# Load=31/8192=0%, Rehash=0, Collisions=0/59=0%
+# Finished Make data base on Thu Aug 18 23:18:09 2022
 
  
