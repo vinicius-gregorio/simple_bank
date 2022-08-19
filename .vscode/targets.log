@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 18 23:18:09 2022
+# Make data base, printed on Fri Aug 19 07:35:10 2022
 
 # Variables
 
@@ -39,7 +39,7 @@ GOPATH = C:\Users\Gregorio\go
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_151728_TVGTFWUUMKPPXRWE
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_45912_WNWQKWFBOBNKSWAT
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -91,7 +91,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 151728
+VSCODE_PID = 45912
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -132,6 +132,8 @@ MAKEFILES :=
 PROMPT = $P$G
 # environment
 CHOCOLATEYLASTPATHUPDATE = 133038249710033101
+# environment
+GOROOT = C:\Program Files\Go
 # environment
 LOGONSERVER = \\DESKTOP-KSK027M
 # environment
@@ -177,8 +179,7 @@ GOMODCACHE = C:\Users\Gregorio\go\pkg\mod
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-COMMONPROGRA 
-MFILES(X86) = C:\Program Files (x86)\Common Files
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
@@ -206,7 +207,7 @@ CHOCOLATEYTOOLSLOCATION = C:\tools
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 151 Stepping 2, GenuineIntel
 # variable set hash-table stats:
-# Load=96/1024=9%, Rehash=0, Collisions=8/123=7%
+# Load=97/1024=9%, Rehash=0, Collisions=8/124=6%
 
 # Pattern-specific Variable Values
 
@@ -355,10 +356,9 @@ createdb:
 # strcache buffers: 1 (0) / strings = 31 / storage = 250 B / avg = 8 B
 # current buf: size = 8174 B / used = 250 B / count = 31 / avg = 8 B
 
-# strcache perfo 
-rmance: lookups = 59 / hit rate = 47%
+# strcache performance: lookups = 59 / hit rate = 47%
 # hash-table stats:
 # Load=31/8192=0%, Rehash=0, Collisions=0/59=0%
-# Finished Make data base on Thu Aug 18 23:18:09 2022
+# Finished Make data base on Fri Aug 19 07:35:10 2022
 
  
