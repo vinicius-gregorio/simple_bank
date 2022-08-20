@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Aug 19 07:35:10 2022
+# Make data base, printed on Sat Aug 20 09:36:33 2022
 
 # Variables
 
@@ -39,7 +39,7 @@ GOPATH = C:\Users\Gregorio\go
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_45912_WNWQKWFBOBNKSWAT
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_50000_QSOTLTXAXXKJDFTT
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -91,7 +91,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 45912
+VSCODE_PID = 50000
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -121,7 +121,8 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python310\Scripts\;C:\Python310\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Gregorio\devtools\apache-maven-3.8.6-bin\apache-maven-3.8.6\bin;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Go\bin;C:\Users\Gregorio\scoop\shims;C:\Users\Gregorio\AppData\Local\Microsoft\WindowsApps;C:\Dev\flutter\bin;C:\Users\Gregorio\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Gregorio\AppData\Roaming\npm;C:\Users\Gregorio\.dotnet\tools;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1\bin;;C:\tools\dart-sdk\bin;C:\Users\Gregorio\AppData\Roaming\Pub\Cache\bin;C:\Users\Gregorio\AppData\Local\Pub\Cache\bin;C:\Users\Gregorio\go\bin
+PATH = C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python310\Scripts\;C:\Python310\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Gregorio\devtools\apache-maven-3.8.6-bin\apache-maven-3.8.6\bin;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Go\bin;C:\Users\Gregorio\scoop\shims;C:\Users\Gregorio\AppData\Local\Microsoft\WindowsApps;C:\Dev\flutter\bin;C:\Users\Gregorio\AppData\Local\Programs\Microsoft VS Code\bin;C 
+:\Users\Gregorio\AppData\Roaming\npm;C:\Users\Gregorio\.dotnet\tools;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1\bin;;C:\tools\dart-sdk\bin;C:\Users\Gregorio\AppData\Roaming\Pub\Cache\bin;C:\Users\Gregorio\AppData\Local\Pub\Cache\bin;C:\Users\Gregorio\go\bin
 # environment
 COMPUTERNAME = DESKTOP-KSK027M
 # default
@@ -132,8 +133,6 @@ MAKEFILES :=
 PROMPT = $P$G
 # environment
 CHOCOLATEYLASTPATHUPDATE = 133038249710033101
-# environment
-GOROOT = C:\Program Files\Go
 # environment
 LOGONSERVER = \\DESKTOP-KSK027M
 # environment
@@ -207,7 +206,7 @@ CHOCOLATEYTOOLSLOCATION = C:\tools
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 151 Stepping 2, GenuineIntel
 # variable set hash-table stats:
-# Load=97/1024=9%, Rehash=0, Collisions=8/124=6%
+# Load=96/1024=9%, Rehash=0, Collisions=8/123=7%
 
 # Pattern-specific Variable Values
 
@@ -215,9 +214,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 151 Stepping 2, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/Gregorio/Documents/Dev/backend/simplebank, mtime 1660873421): 15 files, no impossibilities.
+# . (key c:/Users/Gregorio/Documents/Dev/backend/simplebank, mtime 1660926902): 16 files, no impossibilities.
 
-# 15 files, no impossibilities in 1 directories.
+# 16 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -329,7 +328,8 @@ migrationsup1:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 14):
+#  re 
+cipe to execute (from 'Makefile', line 14):
 	migrate -path db/migrations -database "postgresql://postgres:postgres@localhost:5432/simple_bank?sslmode=disable" -verbose up 1
 
 createdb:
@@ -353,12 +353,12 @@ createdb:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 31 / storage = 250 B / avg = 8 B
-# current buf: size = 8174 B / used = 250 B / count = 31 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 32 / storage = 259 B / avg = 8 B
+# current buf: size = 8174 B / used = 259 B / count = 32 / avg = 8 B
 
-# strcache performance: lookups = 59 / hit rate = 47%
+# strcache performance: lookups = 60 / hit rate = 46%
 # hash-table stats:
-# Load=31/8192=0%, Rehash=0, Collisions=0/59=0%
-# Finished Make data base on Fri Aug 19 07:35:10 2022
+# Load=32/8192=0%, Rehash=0, Collisions=0/60=0%
+# Finished Make data base on Sat Aug 20 09:36:33 2022
 
  
