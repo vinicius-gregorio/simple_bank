@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Aug 20 18:02:41 2022
+# Make data base, printed on Sun Aug 21 15:55:57 2022
 
 # Variables
 
@@ -39,7 +39,7 @@ GOPATH = C:\Users\Gregorio\go
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_22876_JVIPWPQCWOVGTSLV
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_80500_UYTWZYDWIGOKEIQB
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -62,7 +62,6 @@ LANG = C
 TMP = C:\Users\Gregorio\AppData\Local\Temp
 # default
 .INCLUDE_DIRS = .
- 
 # environment
 PROCESSOR_ARCHITEW6432 = AMD64
 # makefile
@@ -92,7 +91,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 22876
+VSCODE_PID = 80500
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -100,8 +99,7 @@ VSCODE_PID = 22876
 # automatic
 <D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguage 
-s":{},"_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # default
 MAKE_HOST := Windows32
 # environment
@@ -123,7 +121,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python310\Scripts\;C:\Python310\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Gregorio\devtools\apache-maven-3.8.6-bin\apache-maven-3.8.6\bin;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Go\bin;C:\Users\Gregorio\scoop\shims;C:\Users\Gregorio\AppData\Local\Microsoft\WindowsApps;C:\Dev\flutter\bin;C:\Users\Gregorio\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Gregorio\AppData\Roaming\npm;C:\Users\Gregorio\.dotnet\tools;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1\bin;;C:\tools\dart-sdk\bin;C:\Users\Gregorio\AppData\Roaming\Pub\Cache\bin;C:\Users\Gregorio\AppData\Local\Pub\Cache\bin;C:\Users\Gregorio\go\bin
+PATH = C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python310\Scripts\;C:\Python310\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Gregorio\devtools\apache-maven-3.8.6-bin\apache-maven-3.8.6\bin;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Go\bin;C:\Program Files\Amazon\AWSCLIV2\;C:\Users\Gregorio\scoop\shims;C:\Users\Gregorio\AppData\Local\Microsoft\WindowsApps;C:\Dev\flutter\bin;C:\Users\Gregorio\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Gregorio\AppData\Roaming\npm;C:\Users\Gregorio\.dotnet\tools;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1\bin;;C:\tools\dart-sdk\bin;C:\Users\Gregorio\AppData\Roaming\Pub\Cache\bin;C:\Users\Gregorio\AppData\Local\Pub\Cache\bin;C:\Users\Gregorio\go\bin
 # environment
 COMPUTERNAME = DESKTOP-KSK027M
 # default
@@ -156,7 +154,8 @@ USERDOMAIN = DESKTOP-KSK027M
 GNUMAKEFLAGS := 
 # environment
 OS = Windows_NT
-# makefile
+# makefile 
+
 .DEFAULT_GOAL := postgres
 # default
 MAKE_VERSION := 4.3
@@ -199,8 +198,8 @@ ALLUSERSPROFILE = C:\ProgramData
 # environment
 SESSIONNAME = Console
 # default
-.FEATURES := target-specific order-only second 
--expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
+.FEATURES := 
+ target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
 PROCESSOR_REVISION = 9702
 # environment
@@ -216,9 +215,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 151 Stepping 2, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/Gregorio/Documents/Dev/backend/simplebank, mtime 1661023945): 18 files, no impossibilities.
+# . (key c:/Users/Gregorio/Documents/Dev/backend/simplebank, mtime 1661058887): 20 files, no impossibilities.
 
-# 18 files, no impossibilities in 1 directories.
+# 20 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -234,11 +233,10 @@ migrationsup:
 #  recipe to execute (from 'Makefile', line 11):
 	migrate -path db/migrations -database "postgresql://postgres:postgres@localhost:5432/simple_bank?sslmode=disable" -verbose up
 
-# Not  
-a target:
+# Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-20 16:09:19
+#  Last modified 2022-08-21 00:22:12
 #  File has been updated.
 #  Successfully updated.
 
@@ -264,7 +262,8 @@ migrationsdown:
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 17):
-	migrate -path db/migrations -database "postgresql://postgres:postgres@localhost:5432/simple_bank?sslmode=disable" -verbose down
+	migrate -path db/migrations -database "postgresql://postgres:postgres@localhost:5432/simple_bank?sslmode=disab 
+le" -verbose down
 
 server:
 #  Phony target (prerequisite of .PHONY).
@@ -355,13 +354,12 @@ createdb:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 34 / storage = 290 B / avg = 8 B
-# current buf: size = 8174 B / used = 290 B / count = 34 / avg =  
-8 B
+# strcache buffers: 1 (0) / strings = 36 / storage = 306 B / avg = 8 B
+# current buf: size = 8174 B / used = 306 B / count = 36 / avg = 8 B
 
-# strcache performance: lookups = 62 / hit rate = 45%
+# strcache performance: lookups = 64 / hit rate = 43%
 # hash-table stats:
-# Load=34/8192=0%, Rehash=0, Collisions=0/62=0%
-# Finished Make data base on Sat Aug 20 18:02:41 2022
+# Load=36/8192=0%, Rehash=0, Collisions=0/64=0%
+# Finished Make data base on Sun Aug 21 15:55:57 2022
 
  
